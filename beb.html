@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Princess Vin 💖</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ff007f, #7928ca, #00dfd8, #ff007f);
+            background-size: 400% 400%;
+            animation: colorSlay 10s ease infinite;
+            overflow: hidden;
+            font-family: 'Khmer OS Battambang', sans-serif;
+        }
+
+        /* Background animation */
+        @keyframes colorSlay {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            max-width: 90%;
+            width: 450px;
+            z-index: 10;
+            animation: popUp 1.5s ease-out;
+        }
+
+        @keyframes popUp {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
+            margin-bottom: 20px;
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .btn-love {
+            padding: 12px 35px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #ff007f, #ff4500);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 0, 127, 0.4);
+            transition: 0.3s ease;
+            font-weight: bold;
+        }
+
+        .btn-love:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 0, 127, 0.6);
+            background: linear-gradient(45deg, #ff4500, #ff007f);
+        }
+
+        /* Heart falling effect */
+        .heart {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 20px;
+            animation: fall linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>For my angel 💖</h1>
+        <p>k'ter dg ort tha b sl o eng pin nah has.b ort dg tha pel nah o ng dg teh tae b jng brb o eng tha b pit che sl o eng men ten sl ster leb sl rk lek dak kman teh o ery  🥰</p>
+        <button class="btn-love" onclick="loveClick()">ber sin che o sl b tich o joch nis mk vin</button>
+    </div>
+
+    <script>
+        // បង្កើតបេះដូងធ្លាក់ចុះមក
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+            
+            // ប្តូរពណ៌បេះដូងអោយ slay ខ្លះៗ
+            const colors = ['❤️', '💖', '💝', '✨', '💕'];
+            heart.innerHTML = colors[Math.floor(Math.random() * colors.length)];
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+
+        // នៅពេលចុច Button នឹងបង្ហាញសារមួយទៀត
+        function loveClick() {
+            alert("I Love You So Much, Vin! 👩‍❤️‍👨 my bsd rbos b ");
+        }
+    </script>
+</body>
+</html>
